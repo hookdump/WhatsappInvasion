@@ -1,5 +1,5 @@
 <div class="msg msg" [ngClass]="classes">
-  <div class="message message-chat message-out">
+  <div class="message message-chat" [ngClass]="enemy ? 'message-in' : 'message-out'">
     <div class="bubble bubble-text">
       <div class="message-text">
         <span class="selectable-text">

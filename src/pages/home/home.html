@@ -20,6 +20,8 @@
           <div class="message-list">
             <msg *ngFor="let message of messages" text="{{message}}">
             </msg>
+            <msg *ngFor="let enemy of enemies" text="{{enemy}}" enemy="true">
+            </msg>
           </div>
         </div>
 
