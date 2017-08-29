@@ -12,3 +12,11 @@
   animation-iteration-count: 1;
   animation-direction: normal;
 }
+
+.msg.msg_fast {
+  animation-duration: 1s;
+}
+
+.msg.msg_slow {
+  animation-duration: 9s;
+}

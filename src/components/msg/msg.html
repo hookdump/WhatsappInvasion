@@ -1,9 +1,9 @@
-<div class="msg msg">
+<div class="msg msg" [ngClass]="classes">
   <div class="message message-chat message-out">
     <div class="bubble bubble-text">
       <div class="message-text">
         <span class="selectable-text">
-          <ng-content></ng-content>
+          {{ text }}
         </span>
       </div>
       <div class="message-meta text-clickable">

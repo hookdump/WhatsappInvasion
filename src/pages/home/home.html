@@ -18,8 +18,7 @@
         <div class="pane-chat-msgs pane-chat-body lastTabIndex">
           <div class="pane-chat-empty"></div>
           <div class="message-list">
-            <msg *ngFor="let message of messages">
-              {{message}}
+            <msg *ngFor="let message of messages" text="{{message}}">
             </msg>
           </div>
         </div>

@@ -24,6 +24,15 @@ page-home {
   right: 0;
 }
 
+.msg.msg_left {
+  right: auto;
+  left: 0;
+}
+
+.msg.msg_hidden {
+  display: none;
+}
+
 .message-text::after {
   display: none;
 }

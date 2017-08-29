@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 /**
  * Generated class for the MsgComponent component.
@@ -11,12 +11,28 @@ import { Component } from '@angular/core';
   templateUrl: 'msg.html'
 })
 export class MsgComponent {
+  private _text = '';
+  classes: string[] = [];
+  ttl: number = 5000;
 
-  text: string;
+  @Input()
+  set text(text: string) {
+    this._text = text;
 
-  constructor() {
-    console.log('Hello MsgComponent Component');
-    this.text = 'Hello World';
+    if (/left/.test(text)) this.classes.push('msg_left');
+    if (/fast/.test(text)) {
+      this.classes.push('msg_fast');
+      this.ttl = 2000;
+    }
+
+    if (/slow/.test(text)) {
+      this.classes.push('msg_slow');
+      this.ttl = 10000;
+    }
+
+    setTimeout(() => { this.classes.push('msg_hidden'); }, this.ttl);
   }
+  get text(): string { return this._text; }
 
+  constructor() { }
 }

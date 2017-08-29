@@ -19,7 +19,7 @@ export class HomePage {
     this.messages.push(text);
     setTimeout(() => {
       this.messages = without(this.messages, text);
-    }, 5000);
+    }, 10000);
     this.myText = '';
   }
 }
