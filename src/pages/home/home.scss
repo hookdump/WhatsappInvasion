@@ -3,7 +3,7 @@ page-home {
 }
 
 .scroll-content {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .main-pane {
@@ -29,3 +29,5 @@ page-home {
   background-size: auto;
   background-image: url('../assets/bg.png');
 }
+
+@import "./animations";
