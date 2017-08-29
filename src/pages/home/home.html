@@ -38,7 +38,9 @@
             <div class="input-placeholder" [hidden]="hidePlaceholder()">
               Escribe un mensaje aquí
             </div>
-            <input class="input" contenteditable="true" data-tab="1" dir="auto" spellcheck="true" [(ngModel)]="myText" />
+            <input class="input" contenteditable="true" data-tab="1" dir="auto" spellcheck="true"
+              [(ngModel)]="myText"
+              (keyup.enter)="sendMessage()" />
           </div>
         </div>
         <button (click)="sendMessage()"
