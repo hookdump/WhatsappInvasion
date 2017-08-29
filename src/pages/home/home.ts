@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { without } from 'lodash';
 
 @Component({
   selector: 'page-home',
@@ -14,10 +15,11 @@ export class HomePage {
     return this.myText !== '';
   }
   sendMessage() {
-    this.messages.push(this.myText);
+    let text = this.myText;
+    this.messages.push(text);
     setTimeout(() => {
-      this.messages = [];
-    }, 4000);
+      this.messages = without(this.messages, text);
+    }, 5000);
     this.myText = '';
   }
 }

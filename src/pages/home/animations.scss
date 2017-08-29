@@ -1,12 +1,12 @@
 @keyframes goUp {
-  0%   { top: 0px; }
-  50%  { top: -250px; }
-  100% { top: -500px; }
+  0%   { bottom: 0px; }
+  50%  { bottom: 250px; }
+  100% { bottom: 500px; }
 }
 
 .msg {
   animation-name: goUp;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-timing-function: linear;
   animation-delay: 1s;
   animation-iteration-count: 1;

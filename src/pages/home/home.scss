@@ -18,6 +18,16 @@ page-home {
   white-space: inherit;
 }
 
+.msg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.message-text::after {
+  display: none;
+}
+
 .pane-chat-tile {
   position: absolute;
   top: 0;
