@@ -6,9 +6,18 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  constructor(public navCtrl: NavController) { }
+  myText: string = '';
+  messages: string[] = [];
 
-  constructor(public navCtrl: NavController) {
-
+  hidePlaceholder() {
+    return this.myText !== '';
   }
-
+  sendMessage() {
+    this.messages.push(this.myText);
+    setTimeout(() => {
+      this.messages = [];
+    }, 4000);
+    this.myText = '';
+  }
 }
