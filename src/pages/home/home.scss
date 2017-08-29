@@ -1,3 +1,31 @@
 page-home {
 
 }
+
+.scroll-content {
+  padding: 0;
+}
+
+.main-pane {
+  background-color: #e5ddd5;
+}
+
+.header .title {
+  padding: 0;
+}
+
+.message .message-text {
+  white-space: inherit;
+}
+
+.pane-chat-tile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.1;
+  background-repeat: repeat repeat;
+  background-size: auto;
+  background-image: url('../assets/bg.png');
+}

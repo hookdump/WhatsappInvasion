@@ -1,14 +1,48 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Whatsapp Invasion
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class="main-pane" no-bounce>
+
+  <div id="main" class="pane pane-chat pane-two">
+    <div class="pane-chat-tile"></div>
+    <div class="pane-body pane-chat-tile-container">
+      <div>
+        <span></span>
+        <span></span>
+
+        <div class="pane-chat-msgs pane-chat-body lastTabIndex">
+          <div class="pane-chat-empty"></div>
+          <div class="message-list">
+            <msg>Testing 123</msg>
+            <msg>izi pizi chinchonizi</msg>
+            <msg>lalalala 123 123 123 123</msg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="compose-filler" style="height: 0px;"></div>
+    <footer class="pane-footer pane-chat-footer">
+
+      <div class="block-compose">
+        <div class="emoji-button-container"></div>
+        <div class="input-container">
+
+          <div tabindex="-1" class="input-emoji">
+            <div class="input-placeholder" style="visibility: visible">
+              Escribe un mensaje aquí
+            </div>
+            <div class="input" contenteditable="true" data-tab="1" dir="auto" spellcheck="true"></div>
+          </div>
+        </div>
+        <button class="compose-btn-send"><div data-icon="send" class="img icon icon-send"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path opacity=".4" d="M1.101 21.757L23.8 12.028 1.101 2.3l.011 7.912 13.623 1.816-13.623 1.817-.011 7.912z"></path></svg></div></button>
+      </div>
+    </footer>
+  </div>
 </ion-content>
