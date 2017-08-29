@@ -7,7 +7,7 @@
 
 @keyframes goDown {
   0%   { top: -60px; }
-  50%  { top: 250px; }
+  50%  { top: 220px; }
   100% { top: 500px; }
 }
 .msg.anim_down { animation-name: goDown; bottom: auto; }
@@ -21,7 +21,7 @@
 }
 
 .msg.msg_fast {
-  animation-duration: 1s;
+  animation-duration: 3s;
 }
 
 .msg.msg_slow {

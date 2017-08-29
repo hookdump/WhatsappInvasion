@@ -22,7 +22,7 @@ export class MsgComponent {
     if (/left/.test(text)) this.classes.push('msg_left');
     if (/fast/.test(text)) {
       this.classes.push('msg_fast');
-      this.ttl = 2000;
+      this.ttl = 4000;
     }
     if (/slow/.test(text)) {
       this.classes.push('msg_slow');

@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { without } from 'lodash';
+import { without, random } from 'lodash';
+import { Enemy } from './enemy';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController) {}
   myText: string = '';
   messages: string[] = [];
   enemies: string[] = [];
+  enemyGenerator: Enemy = new Enemy();
 
   hidePlaceholder() {
     return this.myText !== '';
@@ -26,7 +28,7 @@ export class HomePage {
 
   ngOnInit() {
     setInterval(() => {
-      this.enemies.push('left slow');
+      this.enemies.push(this.enemyGenerator.generate());
     }, 2000);
   }
 }
